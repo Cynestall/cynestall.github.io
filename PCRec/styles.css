@@ -94,7 +94,7 @@ nav div li:hover {
 	width: 460px;
 	margin-right: 50px;
 	height: 100%;
-	background-image: url("https://www.corsair.com/medias/sys_master/images/images/h92/h6a/9111196008478/-CC-9011081-WW-Gallery-Carbide-400C-001.png");
+	background-image: url(index-photo.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -117,7 +117,7 @@ nav div li:hover {
   	top: 280px;
   	bottom: 0;
   	margin-right: 30%;
-  	background-image: url("https://www.corsair.com/medias/sys_master/images/images/h92/h6a/9111196008478/-CC-9011081-WW-Gallery-Carbide-400C-001.png");
+  	background-image: url(index-photo.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
