@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
 	background: #fcfcfc;
-	color: #222;
+	color: #232129;
 	transition: 0.1s;
 }	
 .pclogo {
@@ -38,7 +38,7 @@ nav div ul {
 nav div li {
 	font-size: 20px;
 	color: white;
-	padding: 29px 30px 29px 30px;
+	padding: 29px 30px 28px 30px;
 	display: inline;
 
 }
@@ -55,34 +55,12 @@ nav div li:hover {
 	background-color: #331f6b;
 }
 
-
-.rec {
-	text-align: center;
-}
-
-table.rec {
-	width: 100%;
-	table-layout: fixed;
-}
-
-.photo {
- 	transition: transform .2s;
- 	width: 200px;
- 	height: 200px;
- }
-
-.photo:hover {
-	transform: scale(1.2);
-}
-
-.itemname {
-}
-
 .price {
 	color: #02D16E;
+	font-weight: 600;
 }
 
-.rec table, td, th {
+.rec table, .rec td, .rec th {
 	padding: 5px 0px 5px 5px;
 	width: 31%;
 }
@@ -111,7 +89,7 @@ table.rec {
 	position: relative;
 	top: 244px;
 }
-.indextext h1, p {
+.indextext h1, .indextext p {
 	display: inline;
 }
 .indexphoto {
@@ -179,9 +157,40 @@ table.rec {
 	margin-left: 15%;
 	margin-right: 15%;
 }
+.info {
+	display: block;
+}
+.info p {
+	color: #888191;
+}
+.info p strong {
+	color: #232129;
+}
 .info .question {
+	color: #232129;
 	font-size: 20px;
 	font-weight: 550;
+	margin: 0;
+}
+.centerinfo {
+	margin-top: 2%;
+	margin-right: 15%;
+	margin-left: 15%;
+}
+.centerinfo h2 {
+	font-weight: 600;
+}
+ {
+	background-color: #f2f2f2;
+	padding-bottom: 3%;
+}
+.info a {
+	text-decoration-line: none;
+	color: #232129;
+	font-weight: 600;
+}
+.info a:hover {
+	color: #02D16E;
 }
 footer {
 	position: relative;
@@ -202,6 +211,40 @@ footer p {
 	font-weight: 400;
 	right: 3px;
 
+}
+.indextablespacing {
+	margin-top: 5%;
+}
+.indexUlDiv {
+	text-align: center;
+
+}
+.indexUl {
+	display: inline;
+	text-align: center;
+
+}
+.indexUl li {
+	display: inline-block;
+	width: 350px;
+	text-align: left;
+	height: 300px;
+	vertical-align: text-top;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+.indexUl img {
+	height: 55%;
+	text-align: left;
+}
+.indexUl h3 {
+	font-size: 20px;
+	text-align: left;
+}
+.indexUl p {
+	font-size: 17px;
+	color: #888191;
+	text-align: left;
 }
 input.dark {
 			position: relative;
@@ -280,4 +323,51 @@ div.darkmodecenter {
 }
 #menu ul li:hover {
 	border-left: 6px solid rgba(2,209,110,0.7);
+}
+.centerrecom {
+	text-align: center;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+.recomUl {
+	display: inline;
+	text-align: center;
+	list-style-type: none;
+}
+.recomUl li {
+	vertical-align: text-top;
+	display: inline-block;
+	text-align: center;
+	padding-left: 2%;
+	padding-right: 2%;
+	width: 260px;
+}
+.recomUl li img {
+	width: 100%;
+	vertical-align: middle;
+	transition: 0.4s;
+}
+.recomUl li p {
+	display: block;
+	vertical-align: middle;
+}
+.pcname {
+	font-weight: 600;
+}
+.recomspacing {
+	margin-top: 3%;
+}
+.recomUl hr {
+	border: 1px solid #ccc;
+	width: 90%;
+}
+.centerrecom h2 {
+	text-align: left;
+}
+.recomUl img:hover {
+	transform: scale(1.1);
+}
+.colordecor1 {
+	background-color: #f2f2f2;
+	padding-bottom: 2%;
 }

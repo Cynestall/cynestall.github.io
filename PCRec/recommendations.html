@@ -1,12 +1,13 @@
 <!doctype HTML>
 <html>
 	<head>
-		<title>PCRec</title>
+		<title>PCRec | Recommendations</title>
 	    <link id="styleslink" rel="stylesheet" href="styles.css">
 		<link href = "https://i.imgur.com/6LT5uPE.png" rel="shortcut icon">
 	</head>
 	<body>
    <div id="content">
+      <div class="colordecor1">
       <header id="header">
          <nav>
             <div class="navigation">
@@ -34,8 +35,7 @@
 
                </div>
                <img src="menu.png" class="menuicon" onclick="menuClick()">     
-            </nav>
-            
+            </nav>   
       </header>
             <div id="menu">
           <ul>
@@ -59,68 +59,56 @@
                </ul>
       </div>
        <div class="centercolor">
-      <div class="center" id="centerdiv">
-
-      <table class="rec">
-      <tr>
-      <th class="itemname">Enthusiast Grade Gaming PC</th>
-      <th class="itemname">Consumer Grade Gaming PC</th>
-      <th class="itemname">Gaming PC White</th>
-      <th class="itemname">Gaming PC Orange</th>
-      </tr>
-         <tr>
-         <th class="tablephoto">
-            <img class="photo" src="http://avadirect-freedomusainc1.netdna-ssl.com/pictures/750/11020244_16.png">
-            </th>
-            <th>
-            <img class="photo" src="https://i.imgur.com/QPYp7Xr.png">
-         </th>
-         <th>
-            <img class="photo" src="http://avadirect-freedomusainc1.netdna-ssl.com/pictures/750/Intel_Z370_Custom_Computer_Desktop_pc.png">
-
-         </th>
-         <th>
-            <img class="photo" src="https://cdn.shopify.com/s/files/1/0228/7629/1136/files/main-shot-3_7bdebcdd-e27d-471d-99e8-dbe9885045b2.png?68558">
-
-         </th>
-         </tr>
-            <tr>
-            <th class="price">3999$</th>
-            <th class="price">1999$</th>
-            <th class="price">1299$</th>
-            <th class="price">1099$</th>
-            </tr>
-            <tr>
-               <td>CPU: i9 9900K</td>
-               <td>CPU: i7 8700K</td>
-               <td>CPU: Ryzen 5 3600X</td>
-               <td>CPU: Ryzen 5 3600</td>
-
-            </tr>
-            <tr>
-            <td>GPU: 2x RTX 2080 TI</td>
-            <td>GPU: RTX 2080 TI</td>
-            <td>GPU: RX 5700 XT</td>
-            <td>GPU: RTX 2060</td>
-         </tr>
-         <tr>
-            <td>RAM: 4x8 GB 3200 Mhz</td>
-            <td>RAM: 2x8 GB 3600 Mhz</td>
-            <td>RAM: 2x8 GB 3200 Mhz</td>
-            <td>RAM: 2x8 GB 3200 Mhz</td>
-         </tr>
-   </table>
- 
- </div>
+      <div class="centerrecom" id="centerdiv">
+      <div class="recomspacing">
+      </div>
+      <h2>Recommendations</h2>
+      <br>
+      <br>
+      <ul class="recomUl">
+         <li>
+            <p class="pcname">Enthusiast Grade Gaming PC</p>
+            <img src="http://avadirect-freedomusainc1.netdna-ssl.com/pictures/750/11020244_16.png">
+            <hr>
+            <p  class="price">3999$</p>
+            <p>CPU: i9 9900K</p>
+            <p>GPU: 2x RTX 2080 Ti</p>
+            <p>RAM: 4x8 GB 3200 Mhz</p>
+         </li>
+         <li>
+            <p class="pcname">Consumer Grade Gaming PC</p>
+            <img src="https://i.imgur.com/QPYp7Xr.png">
+            <hr>
+            <p  class="price">1999$</p>
+            <p>CPU: i7 8700K</p>
+            <p>GPU: RTX 2080 Ti</p>
+            <p>RAM: 2x8 GB 3600 Mhz</p>
+         </li>
+         <li>
+            <p class="pcname">Gaming PC White</p>
+            <img src="http://avadirect-freedomusainc1.netdna-ssl.com/pictures/750/Intel_Z370_Custom_Computer_Desktop_pc.png">
+            <hr>
+            <p  class="price">1299$</p>
+            <p>CPU: Ryzen 5 3600X</p>
+            <p>GPU: RX 5700 XT</p>
+            <p>RAM: 2x8 GB 3200 Mhz</p>
+         </li>
+         <li>
+            <p class="pcname">Gaming PC Orange</p>
+            <img src="https://cdn.shopify.com/s/files/1/0228/7629/1136/files/main-shot-3_7bdebcdd-e27d-471d-99e8-dbe9885045b2.png?68558">
+            <hr>
+            <p  class="price">1099$</p>
+            <p>CPU: Ryzen 5 3600</p>
+            <p>GPU: RTX 2060</p>
+            <p>RAM: 2x8 GB 3200 Mhz</p>
+         </li>
+      </ul>
+      <div class="recomspacing">
+      </div>
 </div>
-
+   </div>
+      </div>
  <footer>
-   <ul>
-      <li class="darkli" onclick="darkcheck()">
-      <p> Dark mode</p>
-      <input type="checkbox" class="dark" id="dark">
-      </li>
-    </ul>
  </footer>
 
    <script src="javascript.js"></script>
