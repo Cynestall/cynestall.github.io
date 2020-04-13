@@ -222,13 +222,15 @@ nav div li:hover {
 .centerrecom {
 	text-align: center;
 }
-.recomUl {
-	display: inline;
+.recomList {
+	display: flex;
 	text-align: center;
-	list-style-type: none;
 	padding: 0;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+
 }
-.recomUl li {
+.recomItem {
 	vertical-align: text-top;
 	display: inline-block;
 	text-align: center;
@@ -236,12 +238,12 @@ nav div li:hover {
 	padding-right: 2%;
 	width: 260px;
 }
-.recomUl li img {
+.recomItem img {
 	height: 280px;
 	vertical-align: middle;
 	transition: 0.4s;
 }
-.recomUl li p {
+.recomItem p {
 	display: block;
 	vertical-align: middle;
 }
@@ -258,7 +260,7 @@ nav div li:hover {
 .centerrecom h2 {
 	text-align: left;
 }
-.recomUl img:hover {
+.recomItem img:hover {
 	transform: scale(1.1);
 }
 .colordecor1 {
