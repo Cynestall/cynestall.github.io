@@ -5,6 +5,7 @@ body {
 	color: #232129;
 	transition: 0.1s;
 	width: 100%;
+	overflow-x: hidden;
 }	
 .pclogo {
 	width: 220px;
@@ -16,10 +17,14 @@ header {
     display: block;
     height: 80px;
     transition: 0.1s;
+    z-index: 10000;
+    position: relative;
 }
 nav {
-	margin-left: 15%;
-    margin-right: 15%;
+	padding-left: 15%;
+    padding-right: 15%;
+    z-index: 2;
+    background: #1f104a;
 }
 header img {
 	display: inline;
@@ -71,9 +76,10 @@ nav div li:hover {
 	height: 80px;
 	float: right;
 }
-@media only screen and (max-width: 1084px) {
+@media only screen and (max-width: 1128px) {
 	nav {
 		margin: 0px 2px 0px 2px;
+		padding: 0;
 	}
 	.navul {
 		display: none;
@@ -188,28 +194,29 @@ nav div li:hover {
 }
 
 #menu {
-	display: none;
-	position: absolute;
-	top: 0;
-	right: -300px;
-	float: right;
-	height: 100%;
-	width: 300px;
 	background-color: #100826;
-	transition: .3s;
+	height: 300px;
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	text-align: center;
+	transition: 0.5s ease-in-out;
+	top: -220px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 #content {
 	transition: .3s;
 	position: relative;
 	width: 100%;
 }
-#menu ul {
-	width: 100%;
+#menu > ul {
 	list-style-type: none;
 	margin: auto;
-	padding-top: 40px;
-	display: inline-table;
+	display: inline-block;
 	padding-left: 0px;
+	width: 100%;
 }
 #menu ul li {
 	padding: 20px;
@@ -221,12 +228,13 @@ nav div li:hover {
 	text-decoration: none;
 }
 #menu ul li:hover {
-	border-left: 6px solid rgba(2,209,110,0.7);
+	
 }
-.centerrecom {
-	text-align: center;
+#menu > ul > hr {
+	border: 2px solid #1f104a;
+	width: 50%;
 }
-.recomList {
+#recomList {
 	display: flex;
 	text-align: center;
 	padding: 0;
@@ -261,9 +269,6 @@ nav div li:hover {
 .recomUl hr {
 	border: 1px solid #ccc;
 	width: 90%;
-}
-.centerrecom h2 {
-	text-align: left;
 }
 .recomItem img:hover {
 	transform: scale(1.1);
@@ -506,8 +511,8 @@ footer ul li a:hover {
 	display: flex;
 
 }
-.product-area {
-	display: flex;
+#product-area {
+	display: none;
 }
 .product-image {
 	flex: 50%;
@@ -526,7 +531,6 @@ footer ul li a:hover {
 	text-align: center;
 }
 .order-button {
-	margin-top: 20px;
 	font-size: 20px;
 	padding: 15px 30px;
 	background: #02D16E;
@@ -542,4 +546,24 @@ footer ul li a:hover {
 }
 a {
 	text-decoration: none;
+}
+
+#back {
+	display: none;
+	margin-left: 15%;
+	margin-top: 40px;
+	cursor: pointer;
+}
+#recommendations {
+	display: inline-block;
+	margin-left: 15%;
+	margin-top: 40px;
+}
+.product-text-p {
+	display: inline-block;
+	text-align: left;
+}
+
+#menu.active {
+	transform: translateY(300px);
 }

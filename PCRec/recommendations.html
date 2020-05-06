@@ -12,25 +12,29 @@
       <div class="colordecor1">
       <header id="header">
          <nav>
+
             <div class="navigation">
+
                <a href="index.html">
                <img class="pclogo" src="pclogo.svg">
                   </a>
                <ul class="navul">
-               <a href="info.html">
-               <li class="text">
-                  Info
-                  </li>
-                     </a>
-               <a href="recommendations.html">
-               <li class="text">
-                  Recommendations
-                  </li>
-                     </a>
+                  <a href="info.html">
+                     <li class="text">
+                        Info
+                     </li>
+                  </a>
+
+                  <a href="recommendations.html">
+                     <li class="text">
+                        Recommendations
+                     </li>
+                  </a>
+
                   <a href="https://www.figma.com/proto/66qsoFt9STvLVhtqVy2sjT/PCREC?node-id=22%3A18&scaling=scale-down" target="_blank">
-                  <li class="text">
-                  App Prototype
-                  </li>
+                     <li class="text">
+                        App Prototype
+                     </li>
                   </a>
 
                </ul>
@@ -38,119 +42,69 @@
                </div>
                <img src="menu.png" class="menuicon" onclick="menuClick()">     
             </nav>   
-      </header>
+
             <div id="menu">
           <ul>
                <a href="info.html">
-               <li class="text">
-                  
-                  Info
-                  </li>
-                     </a>
-               <a href="recommendations.html">
-               <li class="text">
-                  Recommendations
-                  </li>
-                     </a>
-                  <a href="https://www.figma.com/proto/66qsoFt9STvLVhtqVy2sjT/PCREC?node-id=22%3A18&scaling=scale-down" target="_blank">
                   <li class="text">
-                  App Prototype
+                     Info
                   </li>
-                  </a>
+               </a>
+               <hr>
+               <a href="recommendations.html">
+                  <li class="text">
+                     Recommendations
+                  </li>
+               </a>
+               <hr>
+               <a href="https://www.figma.com/proto/66qsoFt9STvLVhtqVy2sjT/PCREC?node-id=22%3A18&scaling=scale-down" target="_blank">
+                  <li class="text">
+                     App Prototype
+                  </li>
+               </a>
 
                </ul>
       </div>
+
+      </header>
+
        <div class="centercolor">
       <div class="centerrecom" id="centerdiv">
-      <div class="recomspacing">
-      </div>
-      <h2 style="margin-left: 15%;">Recommendations</h2>
+
+      <h2 id="recommendations">Recommendations</h2>
+      <h2 id="back" onclick="backList()">Back</h2>
       <br>
       <br>
-      <div class="recomList">
-         <div class="recomItem">
-            <p class="pcname">Enthusiast PC  Champion I</p>
-            <img src="http://avadirect-freedomusainc1.netdna-ssl.com/pictures/750/11020244_16.png">
-            <p  class="price">3999$</p>
-            <p>CPU: i9 9900K</p>
-            <p>GPU: 2x RTX 2080 Ti</p>
-            <p>RAM: 4x8 GB 3200 Mhz</p>
+      <div id="recomList">
+      </div>
+
+      <div id="product-area">
+
+         <div class="product-image">
          </div>
-         <div class="recomItem">
-            <p class="pcname">Gaming PC Challenger I</p>
-            <img src="https://i.imgur.com/QPYp7Xr.png">
-            <p  class="price">1999$</p>
-            <p>CPU: i7 8700K</p>
-            <p>GPU: RTX 2080 Ti</p>
-            <p>RAM: 2x8 GB 3600 Mhz</p>
+
+         <div class="product-text-area">
+            <div class="product-text">
+               <h1 class="pcname" id="pcnameproduct"></h1>
+
+               <div class="product-text-p">
+                  <p>CPU: <span id="gpu"></span></p>
+                  <p>GPU: <span id="cpu"></span></p>
+                  <p>RAM: <span id="ram"></span></p>
+               </div>
+               <p class="price"><span id="priceproduct"></span>$</p>
+               <br>
+               <button type="button" class="order-button">Order</button>
+            </div>
          </div>
-         <div class="recomItem">
-            <p class="pcname">Gaming PC Conqueror I</p>
-            <img src="http://avadirect-freedomusainc1.netdna-ssl.com/pictures/750/Intel_Z370_Custom_Computer_Desktop_pc.png">
-            <p  class="price">1299$</p>
-            <p>CPU: Ryzen 5 3600X</p>
-            <p>GPU: RX 5700 XT</p>
-            <p>RAM: 2x8 GB 3200 Mhz</p>
-         </div>
-         <div class="recomItem">
-            <p class="pcname">Gaming PC Predator I</p>
-            <img src="https://cdn.shopify.com/s/files/1/0228/7629/1136/files/main-shot-3_7bdebcdd-e27d-471d-99e8-dbe9885045b2.png?68558">
-            <p  class="price">1099$</p>
-            <p>CPU: Ryzen 5 3600</p>
-            <p>GPU: RTX 2060</p>
-            <p>RAM: 2x8 GB 3200 Mhz</p>
-         </div>
-         <div class="recomItem">
-            <p class="pcname">Gaming PC Starter I</p>
-            <img src="https://cdn.cnetcontent.com/syndication/mediaserverredirect/d6356553b23f764ed653544119c4b5e3/original.png">
-            <p  class="price">499$</p>
-            <p>CPU: Ryzen 3 3400G</p>
-            <p>GPU: Integrated</p>
-            <p>RAM: 2x8GB 3000Mhz</p>
-         </div>
-         <div class="recomItem">
-            <p class="pcname">Gaming PC Conqueror II</p>
-            <img src="https://www.scan.co.uk/images/infopages/corsair_cases/spec_omega/rgb-black-glass.png">
-            <p  class="price">1399$</p>
-            <p>CPU: Ryzen 7 3700X</p>
-            <p>GPU: RX 5700 XT</p>
-            <p>RAM: 2x8GB 3200Mhz</p>
-         </div>
-         <div class="recomItem">
-            <p class="pcname">Gaming PC Starter II</p>
-            <img src="https://aerocool.io/wp-content/uploads/2018/05/AeroCool-Cylon-Product-Gallery.png">
-            <p  class="price">699$</p>
-            <p>CPU: Ryzen 5 2600</p>
-            <p>GPU: GTX 1660</p>
-            <p>RAM: 2x8GB 3200Mhz</p>
-         </div>
-         <div class="recomItem">
-            <p class="pcname">Gaming PC Champion II</p>
-            <img src="https://d3eqjvh3r56yhd.cloudfront.net/wp-content/uploads/2017/12/o10wgs-im-00.png">
-            <p  class="price">2999$</p>
-            <p>CPU: Ryzen 9 3950X</p>
-            <p>GPU: RTX 2080 Ti</p>
-            <p>RAM: 4x8GB 3600Mhz</p>
-         </div>
-         <div class="recomItem">
-            <p class="pcname">Gaming PC Challenger II</p>
-            <img src="https://sta3-nzxtcorporation.netdna-ssl.com/uploads/product_image/image/2592/large_a8d197182a5315f1.png">
-            <p  class="price">1899$</p>
-            <p>CPU: Ryzen 7 3700X</p>
-            <p>GPU: RTX 2070</p>
-            <p>RAM: 2x8GB 3600Mhz</p>
-         </div>
-         <div class="recomItem">
-            <p class="pcname">Gaming PC Predator II</p>
-            <img src="https://sta3-nzxtcorporation.netdna-ssl.com/uploads/variant/image/5735014/large_32f4d30af03ca1fb.png">
-            <p  class="price">999$</p>
-            <p>CPU: Ryzen 5 3600</p>
-            <p>GPU: RX 5700</p>
-            <p>RAM: 2x8GB 3200Mhz</p>
-         </div>
+
+     </div>
+
+
+
       <div class="recomspacing">
       </div>
-   </ul>
+
    </div>
    </div>
    </div>
@@ -162,30 +116,187 @@
       <li>
          <strong>
                © 2020 PCRec OÜ
-                  </strong>
-                     </li>
-                        </ul>
-                           <ul class="footerUlNav">
-                                 <li class="footernav">
-                                    <a href="https://www.figma.com/proto/66qsoFt9STvLVhtqVy2sjT/PCREC?node-id=22%3A18&scaling=scale-down" target="_blank">
-                                       App Prototype  
-                                          </a>
-                                             </li>
-                                                <li class="footernav">
-                                                   <a href="recommendations.html">
-                                                      Recommendations
-                                                         </a>
-                                                            </li>
-                                                               <li class="footernav">
-                                                                  <a href="info.html">
-                                                                     Info
-                                                                        </a>
-                                                                           </li>
+         </strong>
+      </li>
+   </ul>
+
+   <ul class="footerUlNav">
+
+      <li class="footernav">
+         <a href="https://www.figma.com/proto/66qsoFt9STvLVhtqVy2sjT/PCREC?node-id=22%3A18&scaling=scale-down" target="_blank">
+            App Prototype  
+         </a>
+      </li>
+
+      <li class="footernav">
+         <a href="recommendations.html">
+            Recommendations
+         </a>
+      </li>
+
+      <li class="footernav">
+         <a href="info.html">
+            Info
+         </a>
+      </li>
+
    </ul>
  </footer>
    </div>
 
    <script src="javascript.js"></script>
+   <script src="jquery.js"></script>
+   <script type="text/javascript">
+      var computerList = [
+      {
+         "name": "Enthusiast PC  Champion I",
+         "imgURL": "http://avadirect-freedomusainc1.netdna-ssl.com/pictures/750/11020244_16.png",
+         "price": 3999,
+         "cpu": "i9 9900K",
+         "gpu": "2x RTX 2080 Ti",
+         "ram": "4x8 GB 3200 Mhz"
+      },
+      {
+         "name": "Gaming PC Challenger I",
+         "imgURL": "https://i.imgur.com/QPYp7Xr.png",
+         "price": 1999,
+         "cpu": "i7 8700K",
+         "gpu": "RTX 2080 Ti",
+         "ram": "2x8 GB 3600 Mhz"
+      },
+      {
+         "name": "Gaming PC Conqueror I",
+         "imgURL": "http://avadirect-freedomusainc1.netdna-ssl.com/pictures/750/Intel_Z370_Custom_Computer_Desktop_pc.png",
+         "price": 1299,
+         "cpu": "Ryzen 5 3600X",
+         "gpu": "RX 5700 XT",
+         "ram": "2x8 GB 3200 Mhz"
+      },
+      {
+         "name": "Gaming PC Predator I",
+         "imgURL": "https://cdn.shopify.com/s/files/1/0228/7629/1136/files/main-shot-3_7bdebcdd-e27d-471d-99e8-dbe9885045b2.png?68558",
+         "price": 1099,
+         "cpu": "Ryzen 5 3600",
+         "gpu": "RTX 2060",
+         "ram": "2x8 GB 3200 Mhz"
+      },
+      {
+         "name": "Gaming PC Starter I",
+         "imgURL": "https://cdn.cnetcontent.com/syndication/mediaserverredirect/d6356553b23f764ed653544119c4b5e3/original.png",
+         "price": 499,
+         "cpu": "Ryzen 3 3400G",
+         "gpu": "Integrated",
+         "ram": "2x8 GB 3000Mhz"
+      },
+      {
+         "name": "Gaming PC Starter II",
+         "imgURL": "https://aerocool.io/wp-content/uploads/2018/05/AeroCool-Cylon-Product-Gallery.png",
+         "price": 699,
+         "cpu": "Ryzen 5 2600",
+         "gpu": "GTX 1660",
+         "ram": "2x8 GB 3200 Mhz"
+      },
+      {
+         "name": "Gaming PC Champion II",
+         "imgURL": "https://d3eqjvh3r56yhd.cloudfront.net/wp-content/uploads/2017/12/o10wgs-im-00.png",
+         "price": 2999,
+         "cpu": "Ryzen 9 3950X",
+         "gpu": "RTX 2080 Ti",
+         "ram": "4x8 GB 3600Mhz"
+      },
+      {
+         "name": "Gaming PC Challenger II",
+         "imgURL": "https://sta3-nzxtcorporation.netdna-ssl.com/uploads/product_image/image/2592/large_a8d197182a5315f1.png",
+         "price": 1899,
+         "cpu": "Ryzen 7 3700X",
+         "gpu": "RTX 2070",
+         "ram": "2x8 GB 3600Mhz"
+      },
+      {
+         "name": "Gaming PC Conqueror II",
+         "imgURL": "https://www.scan.co.uk/images/infopages/corsair_cases/spec_omega/rgb-black-glass.png",
+         "price": 1399,
+         "cpu": "Ryzen 7 3700X",
+         "gpu": "RX 5700 XT",
+         "ram": "2x8 GB 3600Mhz"
+      },
+      {
+         "name": "Gaming PC Predator II",
+         "imgURL": "https://sta3-nzxtcorporation.netdna-ssl.com/uploads/variant/image/5735014/large_32f4d30af03ca1fb.png",
+         "price": 999,
+         "cpu": "Ryzen 5 3600",
+         "gpu": "RX 5700",
+         "ram": "2x8GB 3200Mhz"
+      }
+      ];
+
+      for (var index = 0; index < computerList.length; index++) {
+
+         var div = document.createElement("DIV");
+         div.classList.add("recomItem");
+
+         var namep = document.createElement("P");
+         namep.classList.add("pcname");
+         namep.innerHTML = computerList[index].name;
+
+         var img = document.createElement("IMG");
+         img.src = computerList[index].imgURL;
+         img.setAttribute("onclick", "showProduct("+ index +")");
+
+         var price = document.createElement("P");
+         price.classList.add("price");
+         price.innerHTML = computerList[index].price + "$";
+
+         var cpu = document.createElement("P");
+         cpu.innerHTML = computerList[index].cpu;
+
+         var gpu = document.createElement("P");
+         gpu.innerHTML = computerList[index].gpu;
+
+         var ram = document.createElement("P");
+         ram.innerHTML = computerList[index].ram;
+
+         div.appendChild(namep);
+         div.appendChild(img);
+         div.appendChild(price);
+         div.appendChild(cpu);
+         div.appendChild(gpu);
+         div.appendChild(ram);
+
+         document.getElementById("recomList").appendChild(div);
+      }
+
+      function showProduct (id) {
+         document.getElementById("recomList").style.display = "none";
+
+         document.getElementsByClassName("product-image")[0].style.backgroundImage = "url(" + computerList[id].imgURL + ")";
+
+         document.getElementById("pcnameproduct").innerHTML = computerList[id].name;
+
+         document.getElementById("priceproduct").innerHTML = computerList[id].price;
+
+         document.getElementById("cpu").innerHTML = computerList[id].cpu;
+
+         document.getElementById("gpu").innerHTML = computerList[id].gpu;
+
+         document.getElementById("ram").innerHTML = computerList[id].ram;
+
+         document.getElementById("recommendations").style.display = "none";
+         document.getElementById("back").style.display = "inline-block";
+
+         document.getElementById("product-area").style.display = "flex";
+      }
+
+      function backList () {
+         document.getElementById("recommendations").style.display = "inline-block";
+         document.getElementById("back").style.display = "none";
+
+         document.getElementById("recomList").style.display = "block";
+         document.getElementById("product-area").style.display = "none";
+
+      }
+
+   </script>
 	</body>
 
 
