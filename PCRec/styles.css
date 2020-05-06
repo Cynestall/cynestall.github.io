@@ -155,11 +155,10 @@ nav div li:hover {
 	color: #888191;
 	text-align: left;
 }
-@media only screen and (max-width: 1489px) {
+@media only screen and (max-width: 1358px) {
 	.indexUl li {
 		display: inline-block;
 		text-align: center;
-		width: 100%;
 		margin: 0;
 	}
 	.indexUl h3 {
@@ -181,8 +180,13 @@ nav div li:hover {
 		width: 100%;
 		text-align: center;
 	}
-
 }
+@media only screen and (max-width: 1075px) {
+	.indexUl li {
+		width: 100%;
+	}
+}
+
 #menu {
 	display: none;
 	position: absolute;
@@ -249,6 +253,7 @@ nav div li:hover {
 }
 .pcname {
 	font-weight: 600;
+	color: #232129;
 }
 .recomspacing {
 	margin-top: 3%;
@@ -501,8 +506,40 @@ footer ul li a:hover {
 	display: flex;
 
 }
-
-
-
-
-
+.product-area {
+	display: flex;
+}
+.product-image {
+	flex: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 500px;
+}
+.product-text-area {
+	flex: 50%;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+.order-button {
+	margin-top: 20px;
+	font-size: 20px;
+	padding: 15px 30px;
+	background: #02D16E;
+	color: white;
+	outline: none;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	font-family: 'Raleway', sans-serif;
+}
+.order-button:active {
+	background: #02b860;
+}
+a {
+	text-decoration: none;
+}
