@@ -45,6 +45,12 @@
 
             <div id="menu">
           <ul>
+               <a href="index.html">
+                  <li class="text">
+                     Home
+                  </li>
+               </a>
+               <hr>
                <a href="info.html">
                   <li class="text">
                      Info
@@ -79,7 +85,7 @@
       </div>
 
       <div id="product-area">
-
+         <h1 class="pcname" id="pcnamephone"></h1>
          <div class="product-image">
          </div>
 
@@ -110,31 +116,28 @@
    </div>
 
 <br>
+
 <footer>
 
-   <ul class="footerUl">
+   <div class="footer-left">
+      <strong>© 2020 PCRec OÜ</strong>
+   </div>
+
+
+   <ul class="footer-right">
       <li>
-         <strong>
-               © 2020 PCRec OÜ
-         </strong>
-      </li>
-   </ul>
-
-   <ul class="footerUlNav">
-
-      <li class="footernav">
          <a href="https://www.figma.com/proto/66qsoFt9STvLVhtqVy2sjT/PCREC?node-id=22%3A18&scaling=scale-down" target="_blank">
             App Prototype  
          </a>
       </li>
 
-      <li class="footernav">
+      <li>
          <a href="recommendations.html">
             Recommendations
          </a>
       </li>
 
-      <li class="footernav">
+      <li>
          <a href="info.html">
             Info
          </a>
@@ -272,6 +275,8 @@
          document.getElementsByClassName("product-image")[0].style.backgroundImage = "url(" + computerList[id].imgURL + ")";
 
          document.getElementById("pcnameproduct").innerHTML = computerList[id].name;
+
+         document.getElementById("pcnamephone").innerHTML = computerList[id].name;
 
          document.getElementById("priceproduct").innerHTML = computerList[id].price;
 

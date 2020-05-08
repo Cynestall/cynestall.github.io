@@ -78,7 +78,7 @@ nav div li:hover {
 }
 @media only screen and (max-width: 1128px) {
 	nav {
-		margin: 0px 2px 0px 2px;
+		margin: 0;
 		padding: 0;
 	}
 	.navul {
@@ -86,6 +86,9 @@ nav div li:hover {
 	}
 	.menuicon {
 		display: inline;
+	}
+	.navigation {
+		margin-left: 6px;
 	}
 }
 
@@ -195,16 +198,16 @@ nav div li:hover {
 
 #menu {
 	background-color: #100826;
-	height: 300px;
+	height: 480px;
 	position: absolute;
 	z-index: -1;
 	width: 100%;
 	text-align: center;
 	transition: 0.5s ease-in-out;
-	top: -220px;
+	top: -400px;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-end;
 }
 #content {
 	transition: .3s;
@@ -213,7 +216,7 @@ nav div li:hover {
 }
 #menu > ul {
 	list-style-type: none;
-	margin: auto;
+	margin: 40px;
 	display: inline-block;
 	padding-left: 0px;
 	width: 100%;
@@ -468,51 +471,67 @@ nav div li:hover {
 
 
 }
-
-.footerUl {
-	display: inline-block;
-	padding: 0;
-}
-.footerUl p {
-	display: inline-block;
-}
 footer {
-	display: block;
+	display: flex;
 	height: 120px;
 	margin-right: 15%;
 	margin-left: 15%;
-	vertical-align: middle;
+	align-items: center;
+	justify-content: space-between;
 }
-footer p {
+footer > ul {
+	display: inline-block;
+	list-style-type: none;
 	margin: 0;
-	display: inline;
-	float: right;
-	vertical-align: middle;
-}
-footer ul li {
-	display: inline-block;
-	color: #232129;
-	padding-right: 15px;
-}
-footer ul li a {
-	color: #232129;
-	text-decoration-line: none;
-}
-footer ul li a:hover {
-	color: #888191;
-}
-.footerUlNav {
-	display: inline-block;
 	padding: 0;
-	float: right;
 }
-
+.footer-right > li {
+	display: inline;
+	padding: 0 20px;
+}
+.footer-right > li > a {
+	color: black;
+}
 .pclisting {
 	display: flex;
 
 }
 #product-area {
 	display: none;
+}
+
+#pcnamephone {
+	display: none;
+	text-align: center;
+}
+@media only screen and (max-width: 1128px) {
+	#product-area {
+		flex-direction: column;
+	}
+	#pcnameproduct {
+		display: none;
+	}
+	#pcnamephone {
+		display: block;
+	}
+	.product-image {
+		flex: none !important;
+	}
+	.product-text-area {
+		display: block !important;
+		font-size: 20px;
+	}
+	footer {
+		flex-direction: column;
+	}
+	footer > ul > li {
+		display: block !important;
+		padding: 15px !important;
+		text-align: center;
+	}
+	.footer-left {
+		margin-bottom: 20px;
+	}
 }
 .product-image {
 	flex: 50%;
@@ -565,5 +584,5 @@ a {
 }
 
 #menu.active {
-	transform: translateY(300px);
+	transform: translateY(380px);
 }
