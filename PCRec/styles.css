@@ -585,3 +585,44 @@ a {
 #menu.active {
 	transform: translateY(380px);
 }
+#mc_embed_signup {
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 100px;
+}
+#mc_embed_signup_scroll {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+#mc_embed_signup_scroll > label {
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+#mc_embed_signup_scroll > input {
+	width: 450px;
+	height: 50px;
+	border-radius: 30px;
+	outline: none;
+	box-sizing: border-box;
+	border: 2px solid #f2f2f2;
+	font-size: 20px;
+	padding-left: 20px;
+	margin-bottom: 20px;
+}
+#mc_embed_signup_scroll > div > input {
+	width: 200px;
+	height: 50px;
+	border-radius: 25px;
+	outline: none;
+	font-size: 20px;
+	cursor: pointer;
+	border: none;
+	background: #02D16E;
+	color: white;
+}
+#mc_embed_signup_scroll > div > input:active {
+	background: #02b860;
+}
