@@ -14,7 +14,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  
+
   gtag('config', 'UA-164684948-1');
 </script>
 
@@ -22,7 +22,9 @@
          function onButtonProto () {
             console.log("Prototype clicked!");
             gtag('js', new Date());
-            gtag("event", "Prototype");
+            gtag("event", "Prototype", {
+               "event_category": "Recommendations"
+            });
          }
       </script>
    <div id="content">

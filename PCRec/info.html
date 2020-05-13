@@ -23,7 +23,9 @@
          function onButtonProto () {
             console.log("Prototype clicked!");
             gtag('js', new Date());
-            gtag("event", "Prototype");
+            gtag("event", "Prototype", {
+               "event_category": "Info"
+            });
          }
       </script>
       <div class="colordecor1">

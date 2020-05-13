@@ -23,13 +23,17 @@
       function onButtonProto () {
          console.log("Prototype clicked!");
          gtag('js', new Date());
-         gtag("event", "Prototype");
+         gtag("event", "Prototype", {
+               "event_category": "Landing"
+         });
       }
 
       function onButtonSubscribe () {
          console.log("Subscribe clicked!");
          gtag('js', new Date());
-         gtag("event", "Subscribe");
+         gtag("event", "Subscribe", {
+               "event_category": "Landing"
+         });
       }
 
 
