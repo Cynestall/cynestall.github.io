@@ -9,6 +9,23 @@
 	</head>
 	<body>
    <div id="content">
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164684948-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-164684948-1');
+</script>
+
+      <script type="text/javascript">
+         function onButtonProto () {
+            console.log("Prototype clicked!");
+            gtag('js', new Date());
+            gtag("event", "Prototype");
+         }
+      </script>
       <div class="colordecor1">
       <header id="header">
          <nav>
@@ -27,7 +44,7 @@
                   Recommendations
                   </li>
                      </a>
-                  <a href="https://www.figma.com/proto/66qsoFt9STvLVhtqVy2sjT/PCREC?node-id=22%3A18&scaling=scale-down" target="_blank">
+                  <a href="https://www.figma.com/proto/66qsoFt9STvLVhtqVy2sjT/PCREC?node-id=22%3A18&scaling=scale-down" target="_blank" onclick="onButtonProto()">
                   <li class="text">
                   App Prototype
                   </li>
@@ -102,7 +119,7 @@
 
    <ul class="footer-right">
       <li>
-         <a href="https://www.figma.com/proto/66qsoFt9STvLVhtqVy2sjT/PCREC?node-id=22%3A18&scaling=scale-down" target="_blank">
+         <a href="https://www.figma.com/proto/66qsoFt9STvLVhtqVy2sjT/PCREC?node-id=22%3A18&scaling=scale-down" target="_blank" onclick="onButtonProto()">
             App Prototype  
          </a>
       </li>

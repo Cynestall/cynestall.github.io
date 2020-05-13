@@ -8,6 +8,33 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164684948-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-164684948-1');
+</script>
+
+
+   <script type="text/javascript">
+      function onButtonProto () {
+         console.log("Prototype clicked!");
+         gtag('js', new Date());
+         gtag("event", "Prototype");
+      }
+
+      function onButtonSubscribe () {
+         console.log("Subscribe clicked!");
+         gtag('js', new Date());
+         gtag("event", "Subscribe");
+      }
+
+
+   </script>
+
    <div id="content">
 		<header id="header">
 			<nav>
@@ -26,7 +53,7 @@
          			Recommendations
          			</li>
                      </a>
-                  <a href="https://www.figma.com/proto/66qsoFt9STvLVhtqVy2sjT/PCREC?node-id=22%3A18&scaling=scale-down" target="_blank">
+                  <a href="https://www.figma.com/proto/66qsoFt9STvLVhtqVy2sjT/PCREC?node-id=22%3A18&scaling=scale-down" target="_blank" onclick="onButtonProto()">
          			<li class="text">
          			App Prototype
          			</li>
@@ -146,7 +173,7 @@
 
                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cc73499239a1f8f18d52951bf_73ddd34368" tabindex="-1" value=""></div>
 
-               <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+               <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"  onclick="onButtonSubscribe()"></div>
           </div>
       </form>
    </div>
@@ -164,7 +191,7 @@
 
    <ul class="footer-right">
       <li>
-         <a href="https://www.figma.com/proto/66qsoFt9STvLVhtqVy2sjT/PCREC?node-id=22%3A18&scaling=scale-down" target="_blank">
+         <a href="https://www.figma.com/proto/66qsoFt9STvLVhtqVy2sjT/PCREC?node-id=22%3A18&scaling=scale-down" target="_blank" onclick="onButtonProto()">
             App Prototype  
          </a>
       </li>
