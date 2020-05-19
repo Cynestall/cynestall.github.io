@@ -626,3 +626,14 @@ a {
 #mc_embed_signup_scroll > div > input:active {
 	background: #02b860;
 }
+.subscribeThank {
+	width: 100%;
+	height: 300px;
+	text-align: center;
+	display: none;
+}
+.subscribeThank > p {
+	color: #232129;
+	font-size: 50px;
+	line-height: 300px;
+}
