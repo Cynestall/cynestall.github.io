@@ -6,6 +6,9 @@
 		<link href = "https://i.imgur.com/6LT5uPE.png" rel="shortcut icon">
 		<link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu&display=swap" rel="stylesheet">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	</head>
 	<body>
       <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -100,9 +103,46 @@
       <h2 id="back" onclick="backList()">Back</h2>
       <br>
       <br>
-      <div id="recomList">
-      </div>
+      <div class="recom-content">
+         <div class="recom-search">
 
+               <div class="price-search">
+                  Price:
+                  <div class="price-range-values-div">
+                     <input type="number" name="min" placeholder="0" class="price-range-values" oninput="setMin(this.value)" id="min">
+                     -
+                     <input type="number" name="max" placeholder="0" class="price-range-values" oninput="setMax(this.value)" id="max">
+                  </div>
+
+                  <br>
+
+                  <div id="range-slider"></div>
+                  <br>
+                     Sort by: 
+                     <select name="sort" id="sort-by">
+                        <option value="cheap">Cheapest first</option>
+                        <option value="expensive">Most expensive first</option>
+                        <option value="name">By name</option>
+                     </select>
+                  <button onclick="listSearch()" id="search-button">Search</button>
+               </div>
+
+               <!--<div id="cpu-search">
+                  CPU:
+               </div>
+               <button type="button" onclick="listCpuSearch()">Search</button>
+               <br>
+               <div id="gpu-search">
+                  GPU:
+               </div>
+               <button type="button" onclick="listGpuSearch()">Search</button> -->
+
+         </div>
+
+         <div id="recomList">
+
+         </div>
+      </div>
       <div id="product-area">
          <h1 class="pcname" id="pcnamephone"></h1>
          <div class="product-image">
@@ -166,11 +206,11 @@
  </footer>
    </div>
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="javascript.js"></script>
    <script type="text/javascript">
       var computerList = [
       {
+         "id": 0,
          "name": "Enthusiast PC  Champion I",
          "imgURL": "http://avadirect-freedomusainc1.netdna-ssl.com/pictures/750/11020244_16.png",
          "price": 3999,
@@ -179,6 +219,7 @@
          "ram": "4x8 GB 3200 Mhz"
       },
       {
+         "id": 1,
          "name": "Gaming PC Challenger I",
          "imgURL": "https://i.imgur.com/QPYp7Xr.png",
          "price": 1999,
@@ -187,6 +228,7 @@
          "ram": "2x8 GB 3600 Mhz"
       },
       {
+         "id": 2,
          "name": "Gaming PC Conqueror I",
          "imgURL": "http://avadirect-freedomusainc1.netdna-ssl.com/pictures/750/Intel_Z370_Custom_Computer_Desktop_pc.png",
          "price": 1299,
@@ -195,6 +237,7 @@
          "ram": "2x8 GB 3200 Mhz"
       },
       {
+         "id": 3,
          "name": "Gaming PC Predator I",
          "imgURL": "https://cdn.shopify.com/s/files/1/0228/7629/1136/files/main-shot-3_7bdebcdd-e27d-471d-99e8-dbe9885045b2.png?68558",
          "price": 1099,
@@ -203,6 +246,7 @@
          "ram": "2x8 GB 3200 Mhz"
       },
       {
+         "id": 4,
          "name": "Gaming PC Starter I",
          "imgURL": "https://cdn.cnetcontent.com/syndication/mediaserverredirect/d6356553b23f764ed653544119c4b5e3/original.png",
          "price": 499,
@@ -211,6 +255,7 @@
          "ram": "2x8 GB 3000Mhz"
       },
       {
+         "id": 5,
          "name": "Gaming PC Starter II",
          "imgURL": "https://aerocool.io/wp-content/uploads/2018/05/AeroCool-Cylon-Product-Gallery.png",
          "price": 699,
@@ -219,6 +264,7 @@
          "ram": "2x8 GB 3200 Mhz"
       },
       {
+         "id": 6,
          "name": "Gaming PC Champion II",
          "imgURL": "https://d3eqjvh3r56yhd.cloudfront.net/wp-content/uploads/2017/12/o10wgs-im-00.png",
          "price": 2999,
@@ -227,6 +273,7 @@
          "ram": "4x8 GB 3600Mhz"
       },
       {
+         "id": 7,
          "name": "Gaming PC Challenger II",
          "imgURL": "https://sta3-nzxtcorporation.netdna-ssl.com/uploads/product_image/image/2592/large_a8d197182a5315f1.png",
          "price": 1899,
@@ -235,6 +282,7 @@
          "ram": "2x8 GB 3600Mhz"
       },
       {
+         "id": 8,
          "name": "Gaming PC Conqueror II",
          "imgURL": "https://www.scan.co.uk/images/infopages/corsair_cases/spec_omega/rgb-black-glass.png",
          "price": 1399,
@@ -243,6 +291,7 @@
          "ram": "2x8 GB 3600Mhz"
       },
       {
+         "id": 9,
          "name": "Gaming PC Predator II",
          "imgURL": "https://sta3-nzxtcorporation.netdna-ssl.com/uploads/variant/image/5735014/large_32f4d30af03ca1fb.png",
          "price": 999,
@@ -252,7 +301,12 @@
       }
       ];
 
+      var showingProducts = [];
+
+      function loadProducts() {
       for (var index = 0; index < computerList.length; index++) {
+
+         showingProducts.push(computerList[index]);
 
          var div = document.createElement("DIV");
          div.classList.add("recomItem");
@@ -287,6 +341,9 @@
 
          document.getElementById("recomList").appendChild(div);
       }
+      }
+
+      loadProducts();
 
       function showProduct (id) {
          document.getElementById("recomList").style.display = "none";
@@ -322,8 +379,416 @@
          document.title = "PCRec | Recommendations";
       }
 
+      var maximum = 0;
+
+      for(var i = 0; i < computerList.length; i++) {
+         if (computerList[i].price > maximum) {
+            maximum = computerList[i].price;
+         }
+      }
+
+      $("#min").val(0);
+      $("#max").val(maximum);
+
+
+      $( function() {
+         $("#range-slider").slider({
+            animate: "fast",
+            range: true,
+            min: 0,
+            max: maximum,
+            values: [0, maximum],
+            slide: function( event, ui ) {
+               $("#min").val(ui.values[0]);
+               $("#max").val(ui.values[1]);  
+            }
+         });
+      });
+
+      function setMin (val) {
+
+         if (val > 0 && val < $("#range-slider").slider("values", 1)) {
+            $("#range-slider").slider("values", 0, val);
+         };
+         if (val === "") {
+            $("#range-slider").slider("values", 0, 0);
+         }
+      }
+
+      function setMax (val) {
+         if (val > $("#range-slider").slider("values", 0) && val <= maximum) {
+            $("#range-slider").slider("values", 1, val);
+         };
+         if (val === "") {
+            $("#range-slider").slider("values", 1, 0);
+         }
+         if (val > maximum) {
+            $("#range-slider").slider("values", 1, maximum);
+            $("#max").val(maximum);
+         }
+      }
+
+      function listSearch () {
+
+         $("#recomList").html("");
+
+         showingProducts = [];
+
+         for (var index = 0; index < computerList.length; index++) {
+
+            if (computerList[index].price >= $("#range-slider").slider("values", 0) && computerList[index].price <= $("#range-slider").slider("values", 1)) {
+               showingProducts.push(computerList[index]);
+            }
+
+            if (document.getElementById("sort-by").value == "cheap")  {
+               showingProducts.sort(function (a,  b) {
+                  if (a.price > b.price) {
+                     return 1;
+                  }
+                  if (a.price < b.price) {
+                     return -1;
+                  }
+                  return 0;
+               });
+            } else if (document.getElementById("sort-by").value == "expensive") {
+               showingProducts.sort(function (a,  b) {
+                  if (a.price < b.price) {
+                     return 1;
+                  }
+                  if (a.price > b.price) {
+                     return -1;
+                  }
+                  return 0;
+               });
+            } else if (document.getElementById("sort-by").value == "name") {
+               showingProducts.sort(function (a,  b) {
+                  if (a.name > b.name) {
+                     return 1;
+                  }
+                  if (a.name < b.name) {
+                     return -1;
+                  }
+                  return 0;
+               });
+            }
+            }
+
+         for (var index = 0; index <  showingProducts.length; index++) {
+            var div = document.createElement("DIV");
+               div.classList.add("recomItem");
+
+               var namep = document.createElement("P");
+               namep.classList.add("pcname");
+               namep.innerHTML = showingProducts[index].name;
+
+               var img = document.createElement("IMG");
+               img.src = showingProducts[index].imgURL;
+               img.setAttribute("onclick", "showProduct("+ index +")");
+
+               var price = document.createElement("P");
+               price.classList.add("price");
+               price.innerHTML = showingProducts[index].price + "$";
+
+               var cpu = document.createElement("P");
+               cpu.innerHTML = showingProducts[index].cpu;
+
+               var gpu = document.createElement("P");
+               gpu.innerHTML = showingProducts[index].gpu;
+
+               var ram = document.createElement("P");
+               ram.innerHTML = showingProducts[index].ram;
+
+               div.appendChild(namep);
+               div.appendChild(img);
+               div.appendChild(price);
+               div.appendChild(cpu);
+               div.appendChild(gpu);
+               div.appendChild(ram);
+
+               document.getElementById("recomList").appendChild(div);
+         }
+
+
+         }
+
+
+      // var div = document.createElement("DIV");
+      //          div.classList.add("recomItem");
+
+      //          var namep = document.createElement("P");
+      //          namep.classList.add("pcname");
+      //          namep.innerHTML = computerList[index].name;
+
+      //          var img = document.createElement("IMG");
+      //          img.src = computerList[index].imgURL;
+      //          img.setAttribute("onclick", "showProduct("+ index +")");
+
+      //          var price = document.createElement("P");
+      //          price.classList.add("price");
+      //          price.innerHTML = computerList[index].price + "$";
+
+      //          var cpu = document.createElement("P");
+      //          cpu.innerHTML = computerList[index].cpu;
+
+      //          var gpu = document.createElement("P");
+      //          gpu.innerHTML = computerList[index].gpu;
+
+      //          var ram = document.createElement("P");
+      //          ram.innerHTML = computerList[index].ram;
+
+      //          div.appendChild(namep);
+      //          div.appendChild(img);
+      //          div.appendChild(price);
+      //          div.appendChild(cpu);
+      //          div.appendChild(gpu);
+      //          div.appendChild(ram);
+
+      //          document.getElementById("recomList").appendChild(div);
+
+
+
+
+
+
+
+      // var itemListCpu = [];
+
+      // var newItemListCpu = [];
+
+
+      // function loadCpuSearch () {
+
+      //    var item;
+
+      //    for(var i = 0; i < computerList.length; i++) {
+
+      //       item = computerList[i].cpu;
+
+      //       itemListCpu.push(item);
+
+      //    }
+
+      //    newItemListCpu = itemListCpu.filter((elem, i, arr) => {
+
+      //       if (arr.indexOf(elem) === i) {
+      //          return elem;
+      //       };
+
+      //    });
+
+      //    for (var j = 0; j < newItemListCpu.length; j++) {
+
+      //       var div = document.createElement("DIV");
+      //       $(div).addClass("cpu-search-div");
+
+      //       var input = document.createElement("INPUT");
+      //       $(input).attr("type", "checkbox");
+      //       $(input).attr("id", "cpu-" + j);
+
+      //       var label = document.createElement("LABEL");
+      //       $(label).attr("for", "cpu-" + j);
+      //       $(label).html(itemListCpu[j]);
+
+      //       var br = document.createElement("BR");
+
+      //       $(div).append(input);
+      //       $(div).append(label);
+
+      //       $("#cpu-search").append(div);
+
+
+      //    }
+
+      // }
+
+      // loadCpuSearch();
+
+      // function listCpuSearch () {
+
+      //    $("#recomList").html("");
+
+      //    for (var i = 0; i < newItemListCpu.length; i++) {
+
+
+      //       if($("#cpu-" + i).prop("checked") === true) {
+
+      //          var a = itemListCpu.indexOf(newItemListCpu[i]);
+
+      //          var b = [];
+
+      //          b.push(a);
+
+      //          while(a >= 0) {
+                     
+      //                a = itemListCpu.indexOf(newItemListCpu[i], a+1);
+
+      //                if (a >= 0) {
+      //                   b.push(a);
+      //                }
+      //          }
+      //          for(var j = 0; j < b.length; j++) {
+
+      //                   var div = document.createElement("DIV");
+      //                   div.classList.add("recomItem");
+
+      //                   var namep = document.createElement("P");
+      //                   namep.classList.add("pcname");
+      //                   namep.innerHTML = computerList[b[j]].name;
+
+      //                   var img = document.createElement("IMG");
+      //                   img.src = computerList[b[j]].imgURL;
+      //                   img.setAttribute("onclick", "showProduct("+ b[j] +")");
+
+      //                   var price = document.createElement("P");
+      //                   price.classList.add("price");
+      //                   price.innerHTML = computerList[b[j]].price + "$";
+
+      //                   var cpu = document.createElement("P");
+      //                   cpu.innerHTML = computerList[b[j]].cpu;
+
+      //                   var gpu = document.createElement("P");
+      //                   gpu.innerHTML = computerList[b[j]].gpu;
+
+      //                   var ram = document.createElement("P");
+      //                   ram.innerHTML = computerList[b[j]].ram;
+
+      //                   div.appendChild(namep);
+      //                   div.appendChild(img);
+      //                   div.appendChild(price);
+      //                   div.appendChild(cpu);
+      //                   div.appendChild(gpu);
+      //                   div.appendChild(ram);
+
+      //                   document.getElementById("recomList").appendChild(div);
+
+      //                }
+
+      //       }
+
+      //    }
+      // }
+
+
+
+      // var itemListGpu = [];
+
+      // var newItemListGpu = [];
+
+
+      // function loadGpuSearch () {
+
+      //    var item;
+
+      //    for(var i = 0; i < computerList.length; i++) {
+
+      //       item = computerList[i].gpu;
+
+      //       itemListGpu.push(item);
+
+      //    }
+
+      //    newItemListGpu = itemListGpu.filter((elem, i, arr) => {
+
+      //       if (arr.indexOf(elem) === i) {
+      //          return elem;
+      //       };
+
+      //    });
+
+      //    for (var j = 0; j < newItemListGpu.length; j++) {
+
+      //       var div = document.createElement("DIV");
+      //       $(div).addClass("gpu-search-div");
+
+      //       var input = document.createElement("INPUT");
+      //       $(input).attr("type", "checkbox");
+      //       $(input).attr("id", "gpu-" + j);
+
+      //       var label = document.createElement("LABEL");
+      //       $(label).attr("for", "gpu-" + j);
+      //       $(label).html(itemListGpu[j]);
+
+      //       var br = document.createElement("BR");
+
+      //       $(div).append(input);
+      //       $(div).append(label);
+
+      //       $("#gpu-search").append(div);
+
+
+      //    }
+
+      // }
+
+      // loadGpuSearch();
+
+      // function listGpuSearch () {
+
+
+      //    $("#recomList").html("");
+
+      //    for (var i = 0; i < newItemListGpu.length; i++) {
+
+      //       if ($("#gpu-" + i).prop("checked") === true) {
+
+      //          var a = itemListGpu.indexOf(newItemListGpu[i]);
+
+      //          var b = [];
+
+      //          b.push(a);
+
+      //          while(a >= 0) {
+                     
+      //                a = itemListGpu.indexOf(newItemListGpu[i], a+1);
+
+      //                if (a >= 0) {
+      //                   b.push(a);
+      //                }
+      //          }
+
+      //             for(var j = 0; j < b.length; j++) {
+
+      //                      var div = document.createElement("DIV");
+      //                      div.classList.add("recomItem");
+
+      //                      var namep = document.createElement("P");
+      //                      namep.classList.add("pcname");
+      //                      namep.innerHTML = computerList[b[j]].name;
+
+      //                      var img = document.createElement("IMG");
+      //                      img.src = computerList[b[j]].imgURL;
+      //                      img.setAttribute("onclick", "showProduct("+ b[j] +")");
+
+      //                      var price = document.createElement("P");
+      //                      price.classList.add("price");
+      //                      price.innerHTML = computerList[b[j]].price + "$";
+
+      //                      var cpu = document.createElement("P");
+      //                      cpu.innerHTML = computerList[b[j]].cpu;
+
+      //                      var gpu = document.createElement("P");
+      //                      gpu.innerHTML = computerList[b[j]].gpu;
+
+      //                      var ram = document.createElement("P");
+      //                      ram.innerHTML = computerList[b[j]].ram;
+
+      //                      div.appendChild(namep);
+      //                      div.appendChild(img);
+      //                      div.appendChild(price);
+      //                      div.appendChild(cpu);
+      //                      div.appendChild(gpu);
+      //                      div.appendChild(ram);
+
+      //                      document.getElementById("recomList").appendChild(div);
+
+      //             }
+
+      //       }
+      //    }
+      // }
+
+
+
    </script>
 	</body>
-
-
    </html>

@@ -637,3 +637,57 @@ a {
 	font-size: 50px;
 	line-height: 300px;
 }
+.recom-content {
+	display: flex;
+	margin: 0 10% 0 5%;
+}
+.recom-search {
+	background: rgba(0, 0, 0, 0.03);
+	padding: 40px;
+	min-width: 300px;
+	height: 100%;
+}
+.price-search > select {
+	width: 100%;
+	height: 30px;
+	font-family: 'Raleway', sans-serif;
+}
+.price-range-values {
+	display: inline-block;
+	width: 40%;
+	text-align: center;
+}
+.price-range-values-div {
+	display: flex;
+	justify-content: space-between;
+}
+.price-range-values-div > input::-webkit-outer-spin-button,
+.price-range-values-div > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.price-range-values-div > input[type=number] {
+  -moz-appearance: textfield;
+}
+.ui-slider-handle {
+	outline: none;
+	border-radius: 50% !important;
+	background: #02D16E !important;
+	border: none !important;
+	height: 20px !important;
+	width: 20px !important;
+	top: calc(-50% - 2px) !important;
+}
+.ui-slider-range {
+	background: #02D16E !important;
+	border: none !important;
+}
+.ui-slider {
+	background: #ccc !important;
+	border: none !important;
+	border-radius: 5px !important;
+	height: 8px !important;
+}
+#search-button {
+	margin-top: 19px;
+}
