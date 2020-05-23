@@ -242,8 +242,7 @@ nav div li:hover {
 	text-align: center;
 	padding: 0;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
-
+	width: 100%;
 }
 .recomItem {
 	vertical-align: text-top;
@@ -251,7 +250,23 @@ nav div li:hover {
 	text-align: center;
 	padding-left: 2%;
 	padding-right: 2%;
-	width: 260px;
+	box-sizing: border-box;
+	width: 33.3333%;
+}
+
+@media only screen and (max-width: 1380px) {
+
+	.recomItem {
+		width:  50%;
+	}
+
+}
+@media only screen and (max-width: 1030px) {
+
+	.recomItem {
+		width:  100%;
+	}
+
 }
 .recomItem img {
 	height: 280px;
@@ -641,7 +656,7 @@ a {
 	display: flex;
 	margin: 0 10% 0 5%;
 }
-.recom-search {
+#recom-search {
 	background: rgba(0, 0, 0, 0.03);
 	padding: 40px;
 	min-width: 300px;

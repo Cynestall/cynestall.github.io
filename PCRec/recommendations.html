@@ -104,7 +104,7 @@
       <br>
       <br>
       <div class="recom-content">
-         <div class="recom-search">
+         <div id="recom-search">
 
                <div class="price-search">
                   Price:
@@ -348,6 +348,8 @@
       function showProduct (id) {
          document.getElementById("recomList").style.display = "none";
 
+         document.getElementById("recom-search").style.display = "none";
+
          document.getElementsByClassName("product-image")[0].style.backgroundImage = "url(" + computerList[id].imgURL + ")";
 
          document.getElementById("pcnameproduct").innerHTML = computerList[id].name;
@@ -370,6 +372,7 @@
       }
 
       function backList () {
+         document.getElementById("recom-search").style.display = "block";
          document.getElementById("recommendations").style.display = "inline-block";
          document.getElementById("back").style.display = "none";
 
