@@ -271,6 +271,9 @@ nav div li:hover {
 	.recomItem {
 		width: 100%;
 	}
+	#search-button {
+		margin-left: calc(100% - 77.95px);
+	}
 }
 @media only screen and (max-width: 380px) {
 	#recom-search {
@@ -593,7 +596,7 @@ a {
 }
 #back {
 	display: none;
-	margin-left: 15%;
+	margin-left: calc(85% - 40px);
 	margin-top: 40px;
 	cursor: pointer;
 	height: 2.5em;
