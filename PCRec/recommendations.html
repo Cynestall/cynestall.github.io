@@ -100,7 +100,7 @@
       <div class="centerrecom" id="centerdiv">
 
       <h2 id="recommendations">Recommendations</h2>
-      <h2 id="back" onclick="backList()">Back</h2>
+      <img id="back" onclick="backList()" src="https://image.flaticon.com/icons/svg/709/709606.svg">
       <br>
       <br>
       <div class="recom-content">
@@ -305,6 +305,16 @@
 
       function loadProducts() {
       for (var index = 0; index < computerList.length; index++) {
+
+         computerList.sort(function (a,  b) {
+                  if (a.price < b.price) {
+                     return 1;
+                  }
+                  if (a.price > b.price) {
+                     return -1;
+                  }
+                  return 0;
+               });
 
          showingProducts.push(computerList[index]);
 

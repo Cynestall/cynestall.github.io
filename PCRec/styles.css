@@ -262,11 +262,22 @@ nav div li:hover {
 
 }
 @media only screen and (max-width: 1030px) {
-
-	.recomItem {
-		width:  100%;
+	.recom-content {
+		display: block !important;
+		margin:  0 !important;
 	}
-
+}
+@media only screen and (max-width: 1030px) {
+	.recomItem {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 380px) {
+	#recom-search {
+		width: 100%;
+		min-width: 0 !important;
+		box-sizing: border-box;
+	}
 }
 .recomItem img {
 	height: 280px;
@@ -448,7 +459,7 @@ nav div li:hover {
 		text-align: center;
 	}
 }
-@media only screen and (max-width: 434px) {
+@media only screen and (max-width: 490px) {
 	.indexpcadimg img {
 		width: 100%;
 	}
@@ -580,12 +591,14 @@ footer > ul {
 a {
 	text-decoration: none;
 }
-
 #back {
 	display: none;
 	margin-left: 15%;
 	margin-top: 40px;
 	cursor: pointer;
+	height: 2.5em;
+	margin-right: 15%;
+	margin-bottom: 5px;
 }
 #recommendations {
 	display: inline-block;
@@ -705,4 +718,27 @@ a {
 }
 #search-button {
 	margin-top: 19px;
+	padding: 10px 15px;
+	background: #02D16E;
+	font-size: 15px;
+	border: none;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+
+}
+@media only screen and (max-width: 490px) {
+	#mc_embed_signup_scroll > label {
+		font-size: 2em;
+	}
+	#mc_embed_signup_scroll > input {
+		max-width: 100%;
+		width: 90%;
+		margin: 0 5% 10% 5%;
+	}
+	#mc_embed_signup_scroll {
+		width: 100%;
+	}
+	#mc_embed_signup_scroll > div > input {
+		width: 70%;
+	}
 }
