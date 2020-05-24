@@ -7,9 +7,9 @@
 		<link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu&display=swap" rel="stylesheet">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 	</head>
 	<body>
       <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -317,6 +317,8 @@
                   return 0;
                });
 
+         computerList[index].id = index;
+
          showingProducts.push(computerList[index]);
 
          var div = document.createElement("DIV");
@@ -387,7 +389,7 @@
          document.getElementById("recommendations").style.display = "inline-block";
          document.getElementById("back").style.display = "none";
 
-         document.getElementById("recomList").style.display = "block";
+         document.getElementById("recomList").style.display = "flex";
          document.getElementById("product-area").style.display = "none";
 
          document.title = "PCRec | Recommendations";
@@ -497,7 +499,7 @@
 
                var img = document.createElement("IMG");
                img.src = showingProducts[index].imgURL;
-               img.setAttribute("onclick", "showProduct("+ index +")");
+               img.setAttribute("onclick", "showProduct("+ showingProducts[index].id +")");
 
                var price = document.createElement("P");
                price.classList.add("price");
