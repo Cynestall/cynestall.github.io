@@ -63,7 +63,11 @@
                </ul>
 
                </div>
-               <img src="menu.png" class="menuicon" onclick="menuClick()">     
+               <div class="menuicon" onclick="menuClick()">
+                  <div class="line" id="line-1"></div>
+                  <div class="line" id="line-2"></div>
+                  <div class="line" id="line-3"></div>
+               </div>    
             </nav>   
 
             <div id="menu">
@@ -121,8 +125,8 @@
                   <br>
                      Sort by: 
                      <select name="sort" id="sort-by">
-                        <option value="cheap">Cheapest first</option>
                         <option value="expensive">Most expensive first</option>
+                        <option value="cheap">Cheapest first</option>
                         <option value="name">By name</option>
                      </select>
                   <button onclick="listSearch()" id="search-button">Search</button>
@@ -409,7 +413,6 @@
 
       $( function() {
          $("#range-slider").slider({
-            animate: "fast",
             range: true,
             min: 0,
             max: maximum,

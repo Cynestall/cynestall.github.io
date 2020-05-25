@@ -75,6 +75,34 @@ nav div li:hover {
 	display: none;
 	height: 80px;
 	float: right;
+	width: 80px;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+.menuicon > .line {
+	background: white;
+	height: 3px;
+	width: 40px;
+	margin: 5px;
+	transition: 0.3s ease-in-out;
+}
+#line-1 {
+	transform-origin: left top;
+}
+#line-3 {
+	transform-origin: left bottom;
+}
+#line-1.active {
+    transform: rotate(45deg);
+    width: 38px;
+}
+#line-2.active {
+	opacity: 0;	
+}
+#line-3.active {
+    transform: rotate(-45deg);
+    width: 38px;
 }
 @media only screen and (max-width: 1128px) {
 	nav {
@@ -85,10 +113,14 @@ nav div li:hover {
 		display: none;
 	}
 	.menuicon {
-		display: inline;
+		display: flex;
 	}
 	.navigation {
 		margin-left: 6px;
+	}
+	#back {
+		margin-left: calc(100% - 70px) !important;
+		margin-top: 20px !important;
 	}
 }
 
@@ -548,7 +580,7 @@ footer > ul {
 	.product-text-area {
 		display: block !important;
 		font-size: 20px;
-	}
+	}	
 	footer {
 		flex-direction: column;
 	}
@@ -559,6 +591,11 @@ footer > ul {
 	}
 	.footer-left {
 		margin-bottom: 20px;
+	}
+}
+@media only screen and (max-width: 760px) {
+	.product-image {
+		height: 300px !important;
 	}
 }
 .product-image {
@@ -745,3 +782,4 @@ a {
 		width: 70%;
 	}
 }
+
