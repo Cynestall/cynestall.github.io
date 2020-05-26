@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PCRec | App Prototype</title>
+	<link id="styleslink" rel="stylesheet" href="styles.css">
+	<link href = "https://i.imgur.com/6LT5uPE.png" rel="shortcut icon">
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+</head>
+<body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164684948-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-164684948-1');
+</script>
+
+<script type="text/javascript">
+    function onButtonProto () {
+    	gtag('js', new Date());
+    	gtag("event", "Prototype", {
+       "event_category": "Recommendations"
+    	});
+ 	}
+</script>
+	<div class="body">
+		<div class="intro-section"><img src="../logoicon.svg"></div>
+
+		<div class="login-section">
+			<div class="logo-area">
+				<img src="../pclogo.svg">
+			</div>
+
+			<div class="login-area">
+				<p id="log-in" onclick="logIn()">LOG IN</p>
+					<div class="line"></div>
+					OR
+					<div class="line"></div>
+				<p id="sign-up" onclick="signUp()">SIGN UP</p>
+			</div>
+
+
+			<div class="footer-area">
+				<p>About us</p>
+				<p>Info</p>
+			</div>
+		</div>
+
+		<div class="logging-section">
+
+			<div class="logo-area">
+				<img src="../pclogo.svg">
+			</div>
+
+			<div class="logging-area">
+
+				<form>
+					<label for="username">USERNAME</label>
+					<input type="text" id="username" placeholder="|">
+
+					<label for="password">PASSWORD</label>
+					<input type="password" id="password" placeholder="|">
+
+					<p onclick="mainMenu()">LOG IN</p>
+				</form>
+			</div>
+
+			<div class="footer-area">
+				<p>About us</p>
+				<p>Info</p>
+			</div>
+		</div>
+
+		<div class="register-section">
+
+			<div class="logo-area">
+				<img src="../pclogo.svg">
+			</div>
+
+			<div class="register-area">
+
+				<form>
+					<label for="username">USERNAME</label>
+					<input type="text" id="username" placeholder="|">
+
+					<label for="email">EMAIL</label>
+					<input type="email" id="email" placeholder="|">
+
+					<label for="password">PASSWORD</label>
+					<input type="password" id="password" placeholder="|">
+
+					<p onclick="mainMenu()">SIGN UP</p>
+				</form>
+			</div>
+
+			<div class="footer-area">
+				<p>About us</p>
+				<p>Info</p>
+			</div>
+		</div>
+
+		<div class="main-menu">
+			<div class="header">
+				<img src="../back.svg" class="back-button" onclick="back()">
+
+				<div class="logo">
+					<img src="../pclogo.svg">
+				</div>
+			</div>
+			<div class="main-menu-body">
+
+				<div class="top-area">
+					
+				</div>
+
+				<div class="middle-area">
+					<label for="budget-input">Enter a budget</label>
+					<input type="number" id="budget-input" placeholder="|">
+
+					<p>Recommendations</p>
+
+				</div>
+
+				<div class="footer-area">
+					<p>About us</p>
+					<p>Info</p>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+
+
+<script type="text/javascript">
+
+
+
+	setTimeout(function() {
+		$(".intro-section").fadeOut(1000);
+		$(".intro-section > img").fadeOut(1000);
+	}, 1000);
+
+	setTimeout(function() {
+		$(".login-section").css("display", "flex");
+	}, 2500);
+
+
+	function back () {
+		$(".main-menu").hide();
+		$(".login-section").css("display", "flex");
+	}
+
+	function logIn () {
+		$(".login-section").hide();
+		$(".logging-section").css("display", "flex");
+	}
+
+	function signUp () {
+		$(".login-section").hide();
+		$(".register-section").css("display", "flex");
+	}
+
+	function mainMenu () {
+		$(".logging-section").hide();
+		$(".register-section").hide();
+		$(".main-menu").show();
+	}
+
+	$('#budget-input').on("keypress", function (e) {
+		if(e.keyCode == 13) {
+			var budget = $("#budget-input").val();
+			console.log(budget);
+
+			
+
+
+		}
+	});
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
