@@ -2,15 +2,24 @@ body {
 	display: flex;
 	justify-content: center;
 	font-family: 'Raleway', sans-serif;
+	background: #222;
 }
-
 
 .body {
 	width: 375px;
-	height: 812px;
-	border: 1px solid #ccc;
+	height: 812px;;
 	background: linear-gradient(180.02deg, rgb(46, 23, 109) 23.43%, rgb(17, 164, 67) 155.71%);
-	border-radius: 10px;
+	border-radius: 20px;
+}
+.cover {
+	position: absolute;
+	background-image: url("iphone.png");
+	height: 842px;
+	width: 420px;
+	background-size: cover;
+	top: -5px;
+	left: 752px;
+	pointer-events: none;
 }
 .intro-section {
 	display: flex;
@@ -189,15 +198,15 @@ body {
 	height: 100%;
 	background: white;
 	width: 100%;
-	border-radius: 9px;
+	border-radius: 20px;
 	display: none;
 }
 .header {
 	width: 100%;
 	height: 135px;
 	background: #1F104A;
-	border-top-left-radius: 9px;
-	border-top-right-radius: 9px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
 }
 .header > .back-button {
 	float: right;
@@ -265,7 +274,76 @@ body {
 	font-size: 25px;
 	margin-top: 50px;
 	padding: 10px 20px;
+	cursor: pointer;
 }
 .main-menu-body > .footer-area > p{
 	color: black;
+}
+.recommendations {
+	height: 100%;
+	background: white;
+	width: 100%;
+	border-radius: 20px;
+	display: none;
+}
+.recommendations > .header > .logo {
+	color: white;
+	font-size: 13px;
+}
+.recommendations > .header > .logo > h1 {
+	margin-top: 27px;
+}
+#recommendation-items {
+	height: calc(100% - 135px);
+	overflow-y: auto;
+}
+#recommendation-items::-webkit-scrollbar {
+    display: none;
+}
+.recom-item {
+	width: calc(100% - 40px);
+	margin: 20px;
+	text-align: center;
+}
+.recom-img {
+	width: 100%;
+}
+.recom-price {
+	color: #02D16E;
+	font-weight: 600;
+}
+.recom-comp-div {
+	width: auto;
+	text-align: left;
+	display: inline-block;
+}
+.budget {
+	height: 100%;
+	background: white;
+	width: 100%;
+	border-radius: 20px;
+	display: none;
+}
+.budget > .header > .logo {
+	color: white;
+	font-size: 13px;
+}
+.budget > .header > .logo > h1 {
+	margin-top: 27px;
+}
+#budget-item {
+	height: calc(100% - 135px);
+	overflow-y: auto;
+}
+#budget-item::-webkit-scrollbar {
+    display: none;
+}
+.recom-order {
+	color: white;
+	padding: 20px 100px;
+	border-radius: 20px;
+	background: #02D16E;
+	font-size: 16px;
+	display: inline-block;
+	cursor: pointer;
 }
