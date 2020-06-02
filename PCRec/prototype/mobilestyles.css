@@ -1,0 +1,351 @@
+body {
+	font-family: 'Raleway', sans-serif;
+	background: #222;
+	margin: 0;
+	padding: 0;
+}
+
+.body {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(180.02deg, rgb(46, 23, 109) 23.43%, rgb(17, 164, 67) 155.71%);
+}
+.intro-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	transition: 0.5s ease-in-out;
+}
+.intro-section > img {
+	width: 273px;
+}
+.login-section {
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+.login-section > div {
+	flex: 33.3333%;
+}
+.logo-area {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+}
+@media only screen and (max-width: 318px) {
+	.logo-area > img {
+		width: 100vw;
+	}
+	.logo > img {
+		width: 100vw !important;
+	}
+}
+.login-area {
+	text-align: center;
+	color: white;
+	margin-top: 70px;
+}
+#log-in {
+	display: inline-block;
+	background: #02D16E;
+	padding:  15px 112px;
+	width: calc(100vw - 240px);
+	text-decoration: none;
+	color: white;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.line {
+	display: inline-block;
+	width: calc(50vw - 27px);
+	background: white;
+	height: 1px;
+	margin: 0 3px 4px 3px;
+}
+#sign-up {
+	display: inline-block;
+	color: #02D16E;
+	border: 2px solid #02D16E;
+	padding:  14px 104px;
+	width: calc(100vw - 227px);
+	text-decoration: none;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.footer-area {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin: 0 15px 0px 15px;
+	color: white;
+}
+.footer-area > p {
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+}
+.logging-section {
+	display: none;
+	flex-direction: column;
+	height: 100%;
+}
+.logging-section > .logo-area {
+	margin-top: 56.5px;
+	flex-grow: 1;
+}
+.logging-section > .footer-area {
+	flex-grow: 1;
+}
+.logging-section > .logging-area {
+	flex-grow: 2;
+	margin-top: 40px;
+}
+.logging-area > form {
+	height: 100%;
+	width: 100%;
+}
+.logging-area > form > label {
+	display: block;
+	color: white;
+	font-size: 20px;
+}
+.logging-area > form {
+	text-align: center;
+}
+.logging-area > form > input {
+	background: transparent;
+	display: block;
+	width: calc(100vw - 36px);
+	border: 2px solid #02D16E;
+	color: white;
+	font-size: 20px;
+	margin: 10px;
+	padding: 6px 6px 8px 6px;
+	font-family: 'Raleway', sans-serif;
+}
+.logging-area > form > input::placeholder {
+	font-family: 'Raleway', sans-serif;
+	color: #02D16E;
+	font-size: 20px;
+}
+.logging-area > form > p {
+	background: #02D16E;
+	margin: 0 10px;
+	margin-top: 20px;
+	padding:  10px 85px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+	color: white;
+	border: 0;
+	cursor: pointer;
+	display: block;
+}
+.register-section {
+	display: none;
+	height: 100%;
+	flex-direction: column;
+}
+.register-section > .logo-area {
+	margin-top: 70px;
+	flex-grow: 1;
+}
+.register-section > .footer-area {
+	flex-grow: 1;
+}
+.register-area {
+	flex-grow: 2;
+	margin-top: 40px;
+}
+.register-area > form {
+	height: 100%;
+	width: 100%;
+}
+.register-area > form > label {
+	display: block;
+	color: white;
+	font-size: 20px;
+}
+.register-area > form {
+	text-align: center;
+}
+.register-area > form > input {
+	background: transparent;
+	border: 2px solid #02D16E;
+	display: block;
+	width: calc(100vw - 36px);
+	color: white;
+	font-size: 20px;
+	margin: 10px;
+	padding: 6px 6px 8px 6px;
+	font-family: 'Raleway', sans-serif;
+}
+.register-area > form > input::placeholder {
+	font-family: 'Raleway', sans-serif;
+	color: #02D16E;
+	font-size: 20px;
+}
+.register-area > form > p {
+	background: #02D16E;
+	margin: 0 10px;
+	margin-top: 20px;
+	padding:  10px 85px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+	color: white;
+	border: 0;
+	cursor: pointer;
+	display: block;
+}
+.main-menu {
+	height: 100%;
+	background: white;
+	width: 100%;
+	display: none;
+}
+.header {
+	width: 100%;
+	height: 135px;
+	background: #1F104A;
+}
+.header > .back-button {
+	float: right;
+	width: 40px;
+	margin: 15px 15px 0 0;
+	cursor: pointer;
+}
+.header > .logo > img {
+	width: 240px;
+	margin-top: 5px;
+}
+.header > .logo {
+	width: 100%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+.main-menu-body {
+	display: flex;
+	height: calc(100% - 135px);
+	flex-direction: column;
+	justify-content: space-between;
+}
+.main-menu-body > .footer-area > a {
+	color: black;
+}
+.middle-area {
+	flex-grow: 2;
+	text-align: center;
+}
+.top-area {
+	flex-grow: 0.8;
+}
+
+.middle-area > input::-webkit-outer-spin-button,
+.middle-area > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.middle-area > input[type=number] {
+  -moz-appearance: textfield;
+}
+.middle-area > label {
+	display: block;
+	font-size: 25px;
+	margin-bottom: 10px;
+} 
+.middle-area > input {
+	padding: 5px;
+	background: #02D16E;
+	border: none;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-size: 25px;
+	width: calc(100vw - 30px);
+}
+.middle-area > input::placeholder {
+	color: white;
+	font-family: 'Raleway', sans-serif;
+}
+.middle-area > p {
+	background: #1F104A;
+	display: block;
+	color: white;
+	font-size: 25px;
+	margin: 0 10px;
+	margin-top: 50px;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+.main-menu-body > .footer-area > p{
+	color: black;
+}
+.recommendations {
+	height: 100%;
+	background: white;
+	width: 100%;
+	display: none;
+}
+.recommendations > .header > .logo {
+	color: white;
+	font-size: 13px;
+}
+.recommendations > .header > .logo > h1 {
+	margin-top: 27px;
+}
+#recommendation-items {
+	height: calc(100% - 135px);
+	overflow-y: auto;
+}
+#recommendation-items::-webkit-scrollbar {
+    display: none;
+}
+.recom-item {
+	width: calc(100% - 40px);
+	margin: 20px;
+	text-align: center;
+}
+.recom-img {
+	width: 100%;
+}
+.recom-price {
+	color: #02D16E;
+	font-weight: 600;
+}
+.recom-comp-div {
+	text-align: center;
+	display: block;
+}
+.budget {
+	height: 100%;
+	background: white;
+	width: 100%;
+	display: none;
+}
+.budget > .header > .logo {
+	color: white;
+	font-size: 13px;
+}
+.budget > .header > .logo > h1 {
+	margin-top: 27px;
+}
+#budget-item {
+	height: calc(100% - 135px);
+	overflow-y: auto;
+}
+#budget-item::-webkit-scrollbar {
+    display: none;
+}
+.recom-order {
+	color: white;
+	padding: 20px 100px;
+	border-radius: 20px;
+	background: #02D16E;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	font-size: 16px;
+	display: block;
+	cursor: pointer;
+}
