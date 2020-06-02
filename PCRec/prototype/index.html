@@ -296,7 +296,7 @@
 
 		 	var price = document.createElement("P");
 		 	$(price).addClass("recom-price");
-		 	$(price).html(computerList[id1].price + "$");
+		 	$(price).html(computerList[id1].price + "€");
 
 		 	var cpu = document.createElement("P");
 		 	$(cpu).addClass("recom-cpu");
@@ -514,6 +514,9 @@
      	$("#recommendation-items").append(div);
       }
 
+      if ($(window).width() <= 800) {
+      	console.log("under 600");
+      }
 
 
 

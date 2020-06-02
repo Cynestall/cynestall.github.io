@@ -7,7 +7,7 @@ body {
 
 .body {
 	width: 375px;
-	height: 812px;;
+	height: 812px;
 	background: linear-gradient(180.02deg, rgb(46, 23, 109) 23.43%, rgb(17, 164, 67) 155.71%);
 	border-radius: 20px;
 }
@@ -346,4 +346,136 @@ body {
 	font-size: 16px;
 	display: inline-block;
 	cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+	body {
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+	.body {
+		width: 100vw;
+		height: 100vh;
+		border-radius: 0;
+	}
+	.cover {
+		display: none;
+	}
+	#log-in {
+		display: block;
+		background: #02D16E;
+		padding:  15px;
+		color: white;
+		margin: 0 40px;
+		margin-bottom: 10px;
+		cursor: pointer;
+	}
+	.line {
+		display: inline-block;
+		width: calc(50vw - 57px);
+		background: white;
+		height: 1px;
+		margin: 0 3px 4px 3px;
+	}
+	#sign-up {
+		display: block;
+		color: #02D16E;
+		border: 2px solid #02D16E;
+		padding:  14px 104px;
+		margin: 0 40px;
+		text-decoration: none;
+		margin-top: 10px;
+		cursor: pointer;
+	}
+	.logging-area > form > input {
+		background: transparent;
+		display: block;
+		width: calc(100vw - 96px);
+		border: 2px solid #02D16E;
+		color: white;
+		font-size: 20px;
+		margin: 10px 40px;
+		padding: 6px 6px 8px 6px;
+		font-family: 'Raleway', sans-serif;
+	}
+	.logging-area > form > p {
+		background: #02D16E;
+		margin: 0 40px;
+		margin-top: 20px;
+		padding:  10px 85px;
+		font-family: 'Raleway', sans-serif;
+		font-size: 20px;
+		color: white;
+		border: 0;
+		cursor: pointer;
+		display: block;
+	}
+		.register-area > form > input {
+		background: transparent;
+		display: block;
+		width: calc(100vw - 96px);
+		border: 2px solid #02D16E;
+		color: white;
+		font-size: 20px;
+		margin: 10px 40px;
+		padding: 6px 6px 8px 6px;
+		font-family: 'Raleway', sans-serif;
+	}
+	.register-area > form > p {
+		background: #02D16E;
+		margin: 0 40px;
+		margin-top: 20px;
+		padding:  10px 85px;
+		font-family: 'Raleway', sans-serif;
+		font-size: 20px;
+		color: white;
+		border: 0;
+		cursor: pointer;
+		display: block;
+	}
+	.main-menu {
+		border-radius: 0;
+	}
+	.header {
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+	}
+	.middle-area > input {
+		width: calc(100vw - 100px);
+	}
+	.middle-area > p {
+		background: #1F104A;
+		display: block;
+		color: white;
+		font-size: 25px;
+		margin: 0 45px;
+		margin-top: 50px;
+		padding: 10px 20px;
+		cursor: pointer;
+	}
+	.recommendations {
+		border-radius: 0;
+	}
+	.budget {
+		border-radius: 0;
+	}
+	.recom-order {
+		color: white;
+		padding: 20px 100px;
+		border-radius: 20px;
+		background: #02D16E;
+		margin-left: 5vw;
+		margin-right: 5vw;
+		font-size: 16px;
+		display: block;
+		cursor: pointer;
+	}
+}
+@media only screen and (max-width: 318px) {
+	.logo-area > img {
+		width: 100vw;
+	}
+	.logo > img {
+		width: 100vw !important;
+	}
 }
