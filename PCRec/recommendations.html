@@ -53,13 +53,6 @@
                         Recommendations
                      </li>
                   </a>
-
-                  <a href="https://www.figma.com/proto/66qsoFt9STvLVhtqVy2sjT/PCREC?node-id=22%3A18&scaling=scale-down" target="_blank" onclick="onButtonProto()">
-                     <li class="text">
-                        App Prototype
-                     </li>
-                  </a>
-
                </ul>
 
                </div>
@@ -89,13 +82,6 @@
                      Recommendations
                   </li>
                </a>
-               <hr>
-               <a href="https://www.figma.com/proto/66qsoFt9STvLVhtqVy2sjT/PCREC?node-id=22%3A18&scaling=scale-down" target="_blank">
-                  <li class="text">
-                     App Prototype
-                  </li>
-               </a>
-
                </ul>
       </div>
 
@@ -162,7 +148,7 @@
                   <p>GPU: <span id="cpu"></span></p>
                   <p>RAM: <span id="ram"></span></p>
                </div>
-               <p class="price"><span id="priceproduct"></span>$</p>
+               <p class="price"><span id="priceproduct"></span>€</p>
                <br>
                <button type="button" class="order-button">Order</button>
             </div>
@@ -190,12 +176,6 @@
 
    <ul class="footer-right">
       <li>
-         <a href="https://www.figma.com/proto/66qsoFt9STvLVhtqVy2sjT/PCREC?node-id=22%3A18&scaling=scale-down" target="_blank" onclick="onButtonProto()">
-            App Prototype  
-         </a>
-      </li>
-
-      <li>
          <a href="recommendations.html">
             Recommendations
          </a>
@@ -211,118 +191,79 @@
  </footer>
    </div>
 
+   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+   <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+
+   <script>
+     // Your web app's Firebase configuration
+     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+     var firebaseConfig = {
+       apiKey: "AIzaSyA0_nRIUhAlt-NYBeoKW8mldVQke1ECHYw",
+       authDomain: "pcrec-48430.firebaseapp.com",
+       projectId: "pcrec-48430",
+       storageBucket: "pcrec-48430.appspot.com",
+       messagingSenderId: "541513880117",
+       appId: "1:541513880117:web:ee3c2eddadb52e7d1bd77c",
+       measurementId: "G-S91YFTN9BW"
+     };
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+     firebase.analytics();
+   </script>
+
    <script src="javascript.js"></script>
    <script type="text/javascript">
-      var computerList = [
-      {
-         "id": 0,
-         "name": "Enthusiast PC  Champion I",
-         "imgURL": "http://avadirect-freedomusainc1.netdna-ssl.com/pictures/750/11020244_16.png",
-         "price": 3999,
-         "cpu": "i9 9900K",
-         "gpu": "2x RTX 2080 Ti",
-         "ram": "4x8 GB 3200 Mhz"
-      },
-      {
-         "id": 1,
-         "name": "Gaming PC Challenger I",
-         "imgURL": "https://i.imgur.com/QPYp7Xr.png",
-         "price": 1999,
-         "cpu": "i7 8700K",
-         "gpu": "RTX 2080 Ti",
-         "ram": "2x8 GB 3600 Mhz"
-      },
-      {
-         "id": 2,
-         "name": "Gaming PC Conqueror I",
-         "imgURL": "http://avadirect-freedomusainc1.netdna-ssl.com/pictures/750/Intel_Z370_Custom_Computer_Desktop_pc.png",
-         "price": 1299,
-         "cpu": "Ryzen 5 3600X",
-         "gpu": "RX 5700 XT",
-         "ram": "2x8 GB 3200 Mhz"
-      },
-      {
-         "id": 3,
-         "name": "Gaming PC Predator I",
-         "imgURL": "https://cdn.shopify.com/s/files/1/0228/7629/1136/files/main-shot-3_7bdebcdd-e27d-471d-99e8-dbe9885045b2.png?68558",
-         "price": 1099,
-         "cpu": "Ryzen 5 3600",
-         "gpu": "RTX 2060",
-         "ram": "2x8 GB 3200 Mhz"
-      },
-      {
-         "id": 4,
-         "name": "Gaming PC Starter I",
-         "imgURL": "https://cdn.cnetcontent.com/syndication/mediaserverredirect/d6356553b23f764ed653544119c4b5e3/original.png",
-         "price": 499,
-         "cpu": "Ryzen 3 3400G",
-         "gpu": "Integrated",
-         "ram": "2x8 GB 3000Mhz"
-      },
-      {
-         "id": 5,
-         "name": "Gaming PC Starter II",
-         "imgURL": "https://aerocool.io/wp-content/uploads/2018/05/AeroCool-Cylon-Product-Gallery.png",
-         "price": 699,
-         "cpu": "Ryzen 5 2600",
-         "gpu": "GTX 1660",
-         "ram": "2x8 GB 3200 Mhz"
-      },
-      {
-         "id": 6,
-         "name": "Gaming PC Champion II",
-         "imgURL": "https://d3eqjvh3r56yhd.cloudfront.net/wp-content/uploads/2017/12/o10wgs-im-00.png",
-         "price": 2999,
-         "cpu": "Ryzen 9 3950X",
-         "gpu": "RTX 2080 Ti",
-         "ram": "4x8 GB 3600Mhz"
-      },
-      {
-         "id": 7,
-         "name": "Gaming PC Challenger II",
-         "imgURL": "https://sta3-nzxtcorporation.netdna-ssl.com/uploads/product_image/image/2592/large_a8d197182a5315f1.png",
-         "price": 1899,
-         "cpu": "Ryzen 7 3700X",
-         "gpu": "RTX 2070",
-         "ram": "2x8 GB 3600Mhz"
-      },
-      {
-         "id": 8,
-         "name": "Gaming PC Conqueror II",
-         "imgURL": "https://www.scan.co.uk/images/infopages/corsair_cases/spec_omega/rgb-black-glass.png",
-         "price": 1399,
-         "cpu": "Ryzen 7 3700X",
-         "gpu": "RX 5700 XT",
-         "ram": "2x8 GB 3600Mhz"
-      },
-      {
-         "id": 9,
-         "name": "Gaming PC Predator II",
-         "imgURL": "https://sta3-nzxtcorporation.netdna-ssl.com/uploads/variant/image/5735014/large_32f4d30af03ca1fb.png",
-         "price": 999,
-         "cpu": "Ryzen 5 3600",
-         "gpu": "RX 5700",
-         "ram": "2x8GB 3200Mhz"
+      var db = firebase.firestore();
+      var computerList = [];
+
+      function updateList()  {
+         for (var i = 0; i < computerList.length; i++) {
+            var computer_dict = {
+               "id": computerList[i].id,
+               "name": computerList[i].name,
+               "imgURL": computerList[i].imgURL,
+               "price": computerList[i].price,
+               "cpu": computerList[i].cpu,
+               "gpu": computerList[i].gpu,
+               "ram": computerList[i].ram
+            }
+
+            db.collection("computers").doc(i.toString()).set(computer_dict)
+            .then((docRef) => {
+               console.log("computer sent");
+            })
+            .catch((error) => {
+               console.error("Error adding document: ", error);
+            });
+         }
       }
-      ];
+      updateList();
+
+      async function makeComputerList() {
+         db.collection("computers").onSnapshot((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+               computerList.push(doc.data());
+               loadProducts(computerList.length - 1);
+            });
+         });
+      }
+
+      async function callList() {
+         await makeComputerList();
+         console.log("callList done");
+         return;
+      }
+
+      callList();
 
       var showingProducts = [];
 
-      function loadProducts() {
-      for (var index = 0; index < computerList.length; index++) {
-
-         computerList.sort(function (a,  b) {
-                  if (a.price < b.price) {
-                     return 1;
-                  }
-                  if (a.price > b.price) {
-                     return -1;
-                  }
-                  return 0;
-               });
-
-         computerList[index].id = index;
-
+      function loadProducts(index) {
          showingProducts.push(computerList[index]);
 
          var div = document.createElement("DIV");
@@ -338,7 +279,7 @@
 
          var price = document.createElement("P");
          price.classList.add("price");
-         price.innerHTML = computerList[index].price + "$";
+         price.innerHTML = computerList[index].price + "€";
 
          var cpu = document.createElement("P");
          cpu.innerHTML = computerList[index].cpu;
@@ -357,10 +298,8 @@
          div.appendChild(ram);
 
          document.getElementById("recomList").appendChild(div);
+         findMax();
       }
-      }
-
-      loadProducts();
 
       function showProduct (id) {
          document.getElementById("recomList").style.display = "none";
@@ -401,28 +340,29 @@
 
       var maximum = 0;
 
-      for(var i = 0; i < computerList.length; i++) {
-         if (computerList[i].price > maximum) {
-            maximum = computerList[i].price;
-         }
-      }
-
-      $("#min").val(0);
-      $("#max").val(maximum);
-
-
-      $( function() {
-         $("#range-slider").slider({
-            range: true,
-            min: 0,
-            max: maximum,
-            values: [0, maximum],
-            slide: function( event, ui ) {
-               $("#min").val(ui.values[0]);
-               $("#max").val(ui.values[1]);  
+      function findMax() {
+         for(var i = 0; i < computerList.length; i++) {
+            if (computerList[i].price > maximum) {
+               maximum = computerList[i].price;
             }
+         }
+
+         $("#min").val(0);
+         $("#max").val(maximum);
+
+         $( function() {
+            $("#range-slider").slider({
+               range: true,
+               min: 0,
+               max: maximum,
+               values: [0, maximum],
+               slide: function( event, ui ) {
+                  $("#min").val(ui.values[0]);
+                  $("#max").val(ui.values[1]);  
+               }
+            });
          });
-      });
+      }
 
       function setMin (val) {
 
@@ -506,7 +446,7 @@
 
                var price = document.createElement("P");
                price.classList.add("price");
-               price.innerHTML = showingProducts[index].price + "$";
+               price.innerHTML = showingProducts[index].price + "€";
 
                var cpu = document.createElement("P");
                cpu.innerHTML = showingProducts[index].cpu;
@@ -526,10 +466,7 @@
 
                document.getElementById("recomList").appendChild(div);
          }
-
-
-         }
-
+      }
 
       // var div = document.createElement("DIV");
       //          div.classList.add("recomItem");

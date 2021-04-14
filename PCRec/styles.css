@@ -465,6 +465,23 @@ nav div li:hover {
 	display: inline-block;
 	vertical-align: middle;
 }
+.indexpcad > div > ul > li > p {
+	margin-bottom: 35px;
+}
+.indexpcad > div > ul > li > a {
+	padding: 15px;
+	background: #1f104a;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	margin-top: 20px;
+	font-size: 16px;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+}
+.indexpcad > div > ul > li > a:hover {
+	background-color: #331f6b;
+}
 .indexpcadimg img {
 	width: 400px;
 }
@@ -651,7 +668,7 @@ a {
 }
 
 #menu.active {
-	transform: translateY(380px);
+	transform: translateY(300px);
 }
 #mc_embed_signup {
 	height: 200px;
